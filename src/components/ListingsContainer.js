@@ -1,23 +1,22 @@
 import React, { useEffect } from 'react';
+import data from "./../../data.json";
+import ListingsCard from './ListingsCard';
 
 
 // container for all of the listings
 
-const ListingsContainer = () => {
-    useEffect(() => {
-        fetch("../data.json", {
-            headers: {
-                "Content-Type": "application/json",
-                "Accept": "application/json"
-            }
+const ListingsContainer = (props) => {
+    const renderListings = () => {
+        return data.map(listing => {
+            return (
+                <ListingsCard key={listing.id} listing={listing} />
+            )
         })
-        .then(response => response.json())
-        .then(data => console.log(data))
-    }, [])
+    }
 
     return (
         <div>
-            This is a list
+            {renderListings()}
         </div>
     )
 }

@@ -1,11 +1,15 @@
 import React from 'react';
 
-const JobCard = () => {
+const ListingsCard = ({ listing }) => {
+    console.log(listing);
     return (
         <div>
-            This is the job card component
+            <p>working</p>
+            <p>{listing.id}</p>
+            <p>{listing.company}</p>
+            <p>{listing.role}</p>
         </div>
     );
 }
 
-export default JobCard;
+export default ListingsCard;
