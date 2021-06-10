@@ -16,16 +16,15 @@ const ListingsContainer = (props) => {
         return data.map(listing => {
             const filtersArray = makeFiltersArray(listing);
             let showListing = true;
-            if (props.currentFilters.length > 0) {
-                props.currentFilters.forEach(filter => {
-                    if (filtersArray.indexOf(filter) !== -1) {
-                        showListing = true;
-                        break;
-                    } else {
-                        showListing = false;
-                        continue;
-                    }
-                })
+            for (let i = 0; i < props.currentFilters.length; i++) {
+                const exists = filtersArray.some(entry => entry === props.currentFilters[i]);
+                if (exists) {
+                    showListing = true;
+                    break;
+                } else {
+                    showListing = false;
+                    continue;
+                }
             }
             if (showListing) {
                 return (

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import ListingsContainer from './listings/ListingsContainer';
+import FilterContainer from './filters/FilterContainer';
 
 const App = () => {
     const [currentFilters, setCurrentFilters] = useState([]);
@@ -19,12 +20,14 @@ const App = () => {
                     return element;
                 }
             })
+            setCurrentFilters(newFilters);
         }
     }
 
     return (
         <div>
             This is the app component
+            {currentFilters.length > 0 ? <FilterContainer removeFilter={removeFilter} currentFilters={currentFilters} /> : null}
             <ListingsContainer addFilter={addFilter} currentFilters={currentFilters} />
         </div>
     );
