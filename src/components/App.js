@@ -4,7 +4,6 @@ import FilterContainer from './filters/FilterContainer';
 
 const App = () => {
     const [currentFilters, setCurrentFilters] = useState([]);
-    console.log(currentFilters);
 
     const addFilter = (e) => {
         console.log(e)
@@ -26,7 +25,6 @@ const App = () => {
 
     return (
         <div>
-            This is the app component
             {currentFilters.length > 0 ? <FilterContainer removeFilter={removeFilter} currentFilters={currentFilters} /> : null}
             <ListingsContainer addFilter={addFilter} currentFilters={currentFilters} />
         </div>

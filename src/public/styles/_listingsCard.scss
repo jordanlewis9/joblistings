@@ -1,4 +1,10 @@
 .listings__card {
     background-color: pink;
     border-radius: 10px;
+
+    &--logo {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+    }
 }
