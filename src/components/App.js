@@ -1,33 +1,37 @@
-import React, { useState } from 'react';
+import React, { useContext } from 'react';
 import ListingsContainer from './listings/ListingsContainer';
 import FilterContainer from './filters/FilterContainer';
+import { FiltersContext, FiltersProvider } from './Context';
 
 const App = () => {
-    const [currentFilters, setCurrentFilters] = useState([]);
+    const { filters } = useContext(FiltersContext);
+    // const [currentFilters, setCurrentFilters] = useState([]);
 
-    const addFilter = (e) => {
-        console.log(e)
-        if (currentFilters.indexOf(e.target.dataset.filter) === -1) {
-            setCurrentFilters([...currentFilters, e.target.dataset.filter]);
-        }
-    }
+    // const addFilter = (e) => {
+    //     console.log(e)
+    //     if (currentFilters.indexOf(e.target.dataset.filter) === -1) {
+    //         setCurrentFilters([...currentFilters, e.target.dataset.filter]);
+    //     }
+    // }
 
-    const removeFilter = (e) => {
-        if (currentFilters.indexOf(e.target.dataset.filter) !== -1) {
-            const newFilters = currentFilters.filter(element => {
-                if (element !== e.target.dataset.filter) {
-                    return element;
-                }
-            })
-            setCurrentFilters(newFilters);
-        }
-    }
+    // const removeFilter = (e) => {
+    //     if (currentFilters.indexOf(e.target.dataset.filter) !== -1) {
+    //         const newFilters = currentFilters.filter(element => {
+    //             if (element !== e.target.dataset.filter) {
+    //                 return element;
+    //             }
+    //         })
+    //         setCurrentFilters(newFilters);
+    //     }
+    // }
 
     return (
-        <div>
-            {currentFilters.length > 0 ? <FilterContainer removeFilter={removeFilter} currentFilters={currentFilters} /> : null}
-            <ListingsContainer addFilter={addFilter} currentFilters={currentFilters} />
-        </div>
+        <FiltersProvider>
+            <div>
+                {filters.length > 0 ? <FilterContainer /> : null}
+                <ListingsContainer />
+            </div>
+        </FiltersProvider>
     );
 }
 
