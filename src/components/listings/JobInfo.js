@@ -3,7 +3,7 @@ import React from 'react';
 const JobInfo = ({ listing }) => {
     return (
         <div>
-            {listing.logo}
+            <img src='./public/images/shortly.svg' />
             <p>{listing.company}</p>
             {listing.new ? <p>NEW!</p> : null}
             {listing.featured ? <p>FEATURED</p> : null}

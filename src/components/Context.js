@@ -9,7 +9,6 @@ export const FiltersProvider = ({ children }) => {
         if (filters.indexOf(e.target.dataset.filter) === -1) {
             setFilters([...filters, e.target.dataset.filter]);
         }
-        console.log(filters)
     }
 
     const removeFilter = (e) => {
