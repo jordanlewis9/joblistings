@@ -23,10 +23,10 @@ const ListingsContainer = (props) => {
                 const exists = filtersArray.some(entry => entry === filters[i]);
                 if (exists) {
                     showListing = true;
-                    break;
+                    continue;
                 } else {
                     showListing = false;
-                    continue;
+                    break;
                 }
             }
             if (showListing) {
