@@ -40,7 +40,7 @@ const ListingsContainer = (props) => {
     }
 
     return (
-        <div>
+        <div className="listings__container">
             {renderListings()}
         </div>
     )
