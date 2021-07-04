@@ -10,11 +10,37 @@
     &__card {
         background-color: pink;
         border-radius: 10px;
+        display: grid;
+        grid-template-rows: auto auto;
+        grid-template-columns: 1fr;
+        padding: 5%;
     
         &--logo {
             width: 100px;
             height: 100px;
             border-radius: 50%;
+        }
+    }
+}
+
+.job {
+    &__filters {
+        &--container {
+            display: grid;
+            grid-auto-rows: 1fr;
+            grid-template-columns: repeat(3, auto);
+            justify-items: start;
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+
+        &--button {
+            display: inline;
+            width: auto;
+            color: $buttonFontColor;
+            background-color: $filterTablets;
+            outline: none;
+            border: none;
         }
     }
 }

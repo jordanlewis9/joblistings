@@ -6,12 +6,12 @@ const JobFilters = (props) => {
 
     const renderFilters = () => {
         return props.filtersArray.map(filter => {
-            return <button onClick={addFilter} data-filter={filter} key={filter}>{filter}</button>
+            return <button onClick={addFilter} data-filter={filter} key={filter} className="job__filters--button">{filter}</button>
         })
     }
 
     return (
-        <div>
+        <div className="job__filters--container">
             {renderFilters()}
         </div>
     )
