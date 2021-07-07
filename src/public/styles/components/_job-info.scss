@@ -1,0 +1,42 @@
+.job__info {
+    &--container {
+        position: relative;
+        display: grid;
+        grid-template-rows: repeat(3, auto);
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        margin: 1rem 0;
+    }
+
+    &--listing-container {
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: repeat(2, auto);
+        max-width: 100%;
+        justify-items: start;
+    }
+
+    &--extra {
+        border-radius: 20px;
+        padding: 5px 7px 3px;
+        font-size: 0.75rem;
+
+        &-container {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    &--new {
+        background-color: $defaultFontColor;
+        color: white;
+        font-weight: 700;
+    }
+
+    &--featured {
+        background-color: $veryDarkCyan;
+        color: white;
+        font-weight: 700;
+        margin-left: 10px;
+    }
+}
