@@ -26,11 +26,9 @@
 .job {
     &__filters {
         &--container {
-            display: grid;
-            grid-auto-rows: 1fr;
-            grid-template-columns: repeat(3, auto);
-            justify-items: start;
-            gap: 1rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
             margin: 1rem 0;
         }
 
@@ -42,7 +40,7 @@
             outline: none;
             border: none;
             font-weight: 700;
-            font-size: 0.75rem;
+            font-size: $mobileFontSize;
             padding: 0.5rem 0.5rem 0.25rem;
             border-radius: 4px;
         }

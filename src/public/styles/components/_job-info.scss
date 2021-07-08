@@ -9,17 +9,23 @@
     }
 
     &--listing-container {
-        display: grid;
-        grid-template-rows: 1fr;
-        grid-template-columns: repeat(2, auto);
+        display: flex;
+        gap: 2rem;
         max-width: 100%;
-        justify-items: start;
+        align-items: center;
+    }
+
+    &--company {
+        align-self: center;
+        color: $defaultFontColor;
+        font-weight: 700;
+        font-size: 0.8rem;
     }
 
     &--extra {
         border-radius: 20px;
         padding: 5px 7px 3px;
-        font-size: 0.75rem;
+        font-size: $mobileFontSize;
 
         &-container {
             display: flex;
@@ -38,5 +44,16 @@
         color: white;
         font-weight: 700;
         margin-left: 10px;
+    }
+
+    &--detail-container {
+        display: flex;
+        justify-content: flex-start;
+        color: $listingDetailFont;
+        gap: 0.5rem;
+        & > p {
+            font-size: $mobileFontSize;
+            align-self: center;
+        }
     }
 }
