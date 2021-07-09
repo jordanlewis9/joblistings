@@ -1,11 +1,18 @@
 .job__info {
     &--container {
-        position: relative;
         display: grid;
         grid-template-rows: repeat(3, auto);
         grid-template-columns: 1fr;
         gap: 1rem;
         margin: 1rem 0;
+    }
+
+    &--picture {
+        height: 44px;
+        width: 44px;
+        position: absolute;
+        top: -22px;
+        left: 5%;
     }
 
     &--listing-container {
@@ -19,13 +26,13 @@
         align-self: center;
         color: $defaultFontColor;
         font-weight: 700;
-        font-size: 0.8rem;
+        font-size: $mobileFontSize;
     }
 
     &--extra {
         border-radius: 20px;
-        padding: 5px 7px 3px;
-        font-size: $mobileFontSize;
+        padding: 7px 7px 3px;
+        font-size: 0.6666rem;
 
         &-container {
             display: flex;
