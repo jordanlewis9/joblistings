@@ -1,0 +1,23 @@
+.listings {
+  &__container {
+    display: grid;
+    grid-auto-rows: auto;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    width: 100%;
+  }
+
+  &__card {
+    border-radius: 5px;
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr;
+    padding: 5%;
+    background-color: white;
+    position: relative;
+  }
+
+  &__featured {
+    border-left: 5px solid $defaultFontColor;
+  }
+}

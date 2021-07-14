@@ -1,48 +1,23 @@
-.listings {
-    &__container {
-        display: grid;
-        grid-auto-rows: auto;
-        grid-template-columns: 1fr;
-        gap: 2rem;
-        width: 100%;
-    }
-
-    &__card {
-        border-radius: 5px;
-        display: grid;
-        grid-template-rows: auto auto;
-        grid-template-columns: 1fr;
-        padding: 5%;
-        background-color: white;
-        position: relative;
-    }
-
-    &__featured {
-        border-left: 5px solid $defaultFontColor;
-        // box-shadow: inset 5px 0 $defaultFontColor;
-    }
-}
-
 .job {
-    &__filters {
-        &--container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1.5rem;
-            margin: 1rem 0;
-        }
-
-        &--button {
-            display: inline;
-            width: auto;
-            color: $defaultFontColor;
-            background-color: $filterTablets;
-            outline: none;
-            border: none;
-            font-weight: 700;
-            font-size: $mobileFontSize;
-            padding: 0.5rem 0.5rem 0.25rem;
-            border-radius: 4px;
-        }
+  &__filters {
+    &--container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      margin: 1rem 0;
     }
+
+    &--button {
+      display: inline;
+      width: auto;
+      color: $defaultFontColor;
+      background-color: $filterTablets;
+      outline: none;
+      border: none;
+      font-weight: 700;
+      font-size: $mobileFontSize;
+      padding: 0.5rem 0.5rem 0.25rem;
+      border-radius: 4px;
+    }
+  }
 }
