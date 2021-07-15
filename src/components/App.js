@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import ListingsContainer from './listings/ListingsContainer';
-import FilterContainer from './filters/FilterContainer';
+import FilterCard from './filters/FilterCard';
 import { FiltersContext } from './Context';
 
 const App = (props) => {
@@ -8,7 +8,7 @@ const App = (props) => {
 
     return (
             <div className="container">
-                {filters.length > 0 ? <FilterContainer /> : null}
+                {filters.length > 0 ? <FilterCard /> : null}
                 <ListingsContainer />
             </div>
     );
