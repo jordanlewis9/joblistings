@@ -4,5 +4,40 @@
     width: 100%;
     background-color: white;
     margin-bottom: 6.5rem;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 3fr 1fr;
+    padding: $cardPadding;
+  }
+
+  &__filters--container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__cancel--container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__item {
+    display: inline;
+      width: auto;
+      color: $defaultFontColor;
+      background-color: $filterTablets;
+      outline: none;
+      border: none;
+      font-weight: 700;
+      font-size: $mobileFontSize;
+      padding: 0.5rem 0.5rem 0.33rem;
+      border-radius: 4px;
+    &::after {
+      content: url("./../../../dist/images/icon-remove.svg");
+      background-color: $defaultFontColor;
+      padding-left: 1rem;
+      font-size: $mobileFontSize;
+    }
   }
 }

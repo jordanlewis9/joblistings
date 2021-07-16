@@ -12,11 +12,11 @@ const FilterCard = (props) => {
 
     return (
         <div className="filter__container">
-            <div className="filters__container">
+            <div className="filter__filters--container">
                 {renderFilters()}
             </div>
-            <div className="cancel__container">
-                { filters[0] ? <button>Cancel</button> : "" }
+            <div className="filter__cancel--container">
+                { filters[0] ? <button className="filter__cancel">Cancel</button> : "" }
             </div>
         </div>
     );
