@@ -23,6 +23,8 @@
   }
 
   &__item {
+    position: relative;
+    z-index: 10;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -31,6 +33,8 @@
     border-radius: 4px;
 
     &--text {
+      position: relative;
+      z-index: -1;
       background-color: $filterTablets;
       color: $defaultFontColor;
       font-weight: 700;
@@ -42,6 +46,13 @@
       background-color: $defaultFontColor;
       padding: 0.5rem 0.5rem 0.33rem;
       border-radius: 0 4px 4px 0;
+      position: relative;
+      z-index: -1;
+      pointer-events: none;
+
+      &-img {
+        pointer-events: none;
+      }
     }
   }
 }
