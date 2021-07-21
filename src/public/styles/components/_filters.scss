@@ -23,21 +23,25 @@
   }
 
   &__item {
-    display: inline;
-      width: auto;
-      color: $defaultFontColor;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+
+    &--text {
       background-color: $filterTablets;
-      outline: none;
-      border: none;
+      color: $defaultFontColor;
       font-weight: 700;
       font-size: $mobileFontSize;
-      padding: 0.5rem 0.5rem 0.33rem;
-      border-radius: 4px;
-    &::after {
-      content: url("./../../../dist/images/icon-remove.svg");
+      padding: 0.5rem;
+    }
+
+    &--close {
       background-color: $defaultFontColor;
-      padding-left: 1rem;
-      font-size: $mobileFontSize;
+      padding: 0.5rem 0.5rem 0.33rem;
+      border-radius: 0 4px 4px 0;
     }
   }
 }

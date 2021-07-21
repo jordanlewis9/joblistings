@@ -6,7 +6,16 @@ const FilterCard = (props) => {
 
     const renderFilters = () => {
         return filters.map(filter => {
-            return <button onClick={removeFilter} data-filter={filter} key={filter} className="filter__item">{filter}</button>
+            return (
+                <button onClick={removeFilter} data-filter={filter} key={filter} className="filter__item">
+                    <p className="filter__item--text">
+                        {filter}
+                    </p>
+                    <div className="filter__item--close">
+                        <img src="./images/icon-remove.svg" className="filter__item--close-img"></img>
+                    </div>
+                </button>
+            )
         })
     }
 
