@@ -22,10 +22,15 @@ export const FiltersProvider = ({ children }) => {
         }
     }
 
+    const removeAllFilters = (e) => {
+        setFilters([]);
+    }
+
     const value = {
         filters,
         addFilter,
-        removeFilter
+        removeFilter,
+        removeAllFilters
     }
 
     return (

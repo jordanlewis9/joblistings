@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { FiltersContext } from './../Context';
 
 const FilterCard = (props) => {
-    const { filters, removeFilter } = useContext(FiltersContext);
+    const { filters, removeFilter, removeAllFilters } = useContext(FiltersContext);
 
     const renderFilters = () => {
         return filters.map(filter => {
@@ -25,7 +25,7 @@ const FilterCard = (props) => {
                 {renderFilters()}
             </div>
             <div className="filter__cancel--container">
-                { filters[0] ? <button className="filter__cancel">Cancel</button> : "" }
+                { filters[0] ? <button onClick={removeAllFilters} className="filter__clear">Clear</button> : "" }
             </div>
         </div>
     );

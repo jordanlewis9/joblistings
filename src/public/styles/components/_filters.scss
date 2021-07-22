@@ -8,12 +8,14 @@
     grid-template-rows: 1fr;
     grid-template-columns: 3fr 1fr;
     padding: $cardPadding;
+    gap: 0.5rem;
+    border-radius: 4px;
   }
 
   &__filters--container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    gap: 1rem;
   }
 
   &__cancel--container {
@@ -23,8 +25,6 @@
   }
 
   &__item {
-    position: relative;
-    z-index: 10;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -33,26 +33,31 @@
     border-radius: 4px;
 
     &--text {
-      position: relative;
-      z-index: -1;
       background-color: $filterTablets;
       color: $defaultFontColor;
       font-weight: 700;
       font-size: $mobileFontSize;
-      padding: 0.5rem;
+      padding: 0.5rem 0.5rem 0.33rem;
     }
 
     &--close {
       background-color: $defaultFontColor;
-      padding: 0.5rem 0.5rem 0.33rem;
+      padding: 0.5rem 0.5rem 0.2rem;
       border-radius: 0 4px 4px 0;
-      position: relative;
-      z-index: -1;
       pointer-events: none;
 
       &-img {
         pointer-events: none;
       }
     }
+  }
+
+  &__clear {
+    border: none;
+    outline: none;
+    background-color: rgba(0, 0, 0, 0);
+    color: $listingDetailFont;
+    font-size: $mobileFontSize;
+    font-weight: 700;
   }
 }
