@@ -12,9 +12,13 @@ export const FiltersProvider = ({ children }) => {
     }
 
     const removeFilter = (e) => {
-        if (filters.indexOf(e.target.dataset.filter) !== -1) {
+        if (e.target.classList.contains("filter__item")) {
+            return null;
+        }
+        const button = e.target.closest(".filter__item");
+        if (filters.indexOf(button.dataset.filter) !== -1) {
             const newFilters = filters.filter(element => {
-                if (element !== e.target.dataset.filter) {
+                if (element !== button.dataset.filter) {
                     return element;
                 }
             })

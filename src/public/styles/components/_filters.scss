@@ -38,16 +38,17 @@
       font-weight: 700;
       font-size: $mobileFontSize;
       padding: 0.5rem 0.5rem 0.33rem;
+      pointer-events: none;
     }
 
     &--close {
       background-color: $defaultFontColor;
       padding: 0.5rem 0.5rem 0.2rem;
       border-radius: 0 4px 4px 0;
-      pointer-events: none;
 
-      &-img {
-        pointer-events: none;
+      &:hover {
+        cursor: pointer;
+        background-color: $veryDarkCyan;
       }
     }
   }
@@ -59,5 +60,11 @@
     color: $listingDetailFont;
     font-size: $mobileFontSize;
     font-weight: 700;
+
+    &:hover {
+      cursor: pointer;
+      text-decoration: underline;
+      color: $defaultFontColor;
+    }
   }
 }

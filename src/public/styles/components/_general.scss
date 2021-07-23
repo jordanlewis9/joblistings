@@ -20,9 +20,8 @@ body {
 #root {
   width: 100%;
   min-height: 100vh;
-  background-image: url("./../../../dist/images/bg-header-mobile.svg");
+  background-image: url("./../../../dist/images/bg-header-mobile.svg"), linear-gradient(to bottom, $defaultFontColor 0 20vh, $background 20vh 100%);
   background-position: 0 0;
   background-repeat: no-repeat;
   background-size: 100% 20vh;
-  background-color: $veryDarkCyan;
 }

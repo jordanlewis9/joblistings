@@ -18,6 +18,12 @@
       font-size: $mobileFontSize;
       padding: 0.5rem 0.5rem 0.33rem;
       border-radius: 4px;
+
+      &:hover {
+        cursor: pointer;
+        color: $filterTablets;
+        background-color: $defaultFontColor;
+      }
     }
   }
 }
