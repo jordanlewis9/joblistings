@@ -3,13 +3,14 @@
     height: auto;
     width: 100%;
     background-color: white;
-    margin-bottom: 6.5rem;
+    margin-bottom: 2rem;
     display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: 3fr 1fr;
     padding: $cardPadding;
     gap: 0.5rem;
     border-radius: 4px;
+    box-shadow: 5px 5px 20px -15px;
   }
 
   &__filters--container {

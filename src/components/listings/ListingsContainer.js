@@ -1,4 +1,4 @@
-import React, { useEffect, useContext } from 'react';
+import React, { useContext } from 'react';
 import data from "../../../data.json";
 import ListingsCard from './ListingsCard';
 import { FiltersContext } from './../Context';
@@ -6,7 +6,7 @@ import { FiltersContext } from './../Context';
 
 // container for all of the listings
 
-const ListingsContainer = (props) => {
+const ListingsContainer = () => {
     const { filters } = useContext(FiltersContext);
 
     const makeFiltersArray = (listing) => {
@@ -40,7 +40,7 @@ const ListingsContainer = (props) => {
     }
 
     return (
-        <div className="listings__container">
+        <div className={`listings__container ${ filters.length > 0 ? 'listings__no-top-margin' : ''}`}>
             {renderListings()}
         </div>
     )

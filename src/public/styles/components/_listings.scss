@@ -22,4 +22,8 @@
   &__featured {
     border-left: 5px solid $defaultFontColor;
   }
+
+  &__no-top-margin {
+    margin-top: 0;
+  }
 }
