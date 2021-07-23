@@ -24,7 +24,7 @@ const FilterCard = (props) => {
             <div className="filter__filters--container">
                 {renderFilters()}
             </div>
-            <div className="filter__cancel--container">
+            <div className="filter__clear--container">
                 { filters[0] ? <button onClick={removeAllFilters} className="filter__clear">Clear</button> : "" }
             </div>
         </div>

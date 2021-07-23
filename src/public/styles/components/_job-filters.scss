@@ -27,3 +27,14 @@
     }
   }
 }
+
+@include desktop {
+  .job {
+    &__filters {
+      &--container {
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+}

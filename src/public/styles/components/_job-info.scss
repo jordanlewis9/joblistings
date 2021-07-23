@@ -1,73 +1,98 @@
 .job__info {
+  &--container {
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin: 1rem 0;
+  }
+
+  &--picture {
+    height: 44px;
+    width: 44px;
+    position: absolute;
+    top: -22px;
+    left: 5%;
+  }
+
+  &--listing-container {
+    display: flex;
+    gap: 2rem;
+    max-width: 100%;
+    align-items: center;
+  }
+
+  &--company {
+    align-self: center;
+    color: $defaultFontColor;
+    font-weight: 700;
+    font-size: $mobileFontSize;
+  }
+
+  &--extra {
+    border-radius: 20px;
+    padding: 7px 7px 3px;
+    font-size: 0.6666rem;
+
+    &-container {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &--new {
+    background-color: $defaultFontColor;
+    color: white;
+    font-weight: 700;
+  }
+
+  &--featured {
+    background-color: $veryDarkCyan;
+    color: white;
+    font-weight: 700;
+    margin-left: 10px;
+  }
+
+  &--detail-container {
+    display: flex;
+    justify-content: flex-start;
+    color: $listingDetailFont;
+    gap: 0.5rem;
+    & > p {
+      font-size: $mobileFontSize;
+      align-self: center;
+    }
+  }
+
+  &--position {
+    &:hover {
+      cursor: pointer;
+      color: $defaultFontColor;
+    }
+  }
+}
+
+@include desktop {
+  .job__info {
     &--container {
-        display: grid;
-        grid-template-rows: repeat(3, auto);
-        grid-template-columns: 1fr;
-        gap: 1rem;
-        margin: 1rem 0;
+      display: grid;
+      grid-template-columns: 1fr 5fr;
+      grid-template-rows: repeat(3, auto);
+      gap: 0.5rem 1rem;
+      align-items: center;
     }
 
     &--picture {
-        height: 44px;
-        width: 44px;
-        position: absolute;
-        top: -22px;
-        left: 5%;
-    }
-
-    &--listing-container {
-        display: flex;
-        gap: 2rem;
-        max-width: 100%;
-        align-items: center;
-    }
-
-    &--company {
-        align-self: center;
-        color: $defaultFontColor;
-        font-weight: 700;
-        font-size: $mobileFontSize;
-    }
-
-    &--extra {
-        border-radius: 20px;
-        padding: 7px 7px 3px;
-        font-size: 0.6666rem;
-
-        &-container {
-            display: flex;
-            justify-content: space-between;
-        }
-    }
-
-    &--new {
-        background-color: $defaultFontColor;
-        color: white;
-        font-weight: 700;
-    }
-
-    &--featured {
-        background-color: $veryDarkCyan;
-        color: white;
-        font-weight: 700;
-        margin-left: 10px;
+      position: static;
+      grid-row: 1 / 4;
+      align-self: center;
+      justify-self: center;
+      width: auto;
+      height: 100%;
     }
 
     &--detail-container {
-        display: flex;
-        justify-content: flex-start;
-        color: $listingDetailFont;
-        gap: 0.5rem;
-        & > p {
-            font-size: $mobileFontSize;
-            align-self: center;
-        }
+      align-items: center;
     }
-
-    &--position {
-        &:hover {
-            cursor: pointer;
-            color: $defaultFontColor;
-        }
-    }
+  }
 }

@@ -7,7 +7,7 @@
     display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: 3fr 1fr;
-    padding: $cardPadding;
+    padding: $mobileCardPadding;
     gap: 0.5rem;
     border-radius: 4px;
     box-shadow: 5px 5px 20px -15px;
@@ -19,7 +19,7 @@
     gap: 1rem;
   }
 
-  &__cancel--container {
+  &__clear--container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -66,6 +66,20 @@
       cursor: pointer;
       text-decoration: underline;
       color: $defaultFontColor;
+    }
+  }
+}
+
+@include desktop {
+  .filter {
+    &__container {
+      padding: $desktopCardPadding;
+    }
+
+    &__clear {
+      &--container {
+        justify-content: flex-end;
+      }
     }
   }
 }
