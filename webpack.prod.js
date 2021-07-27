@@ -2,6 +2,7 @@ const { merge } = require("webpack-merge");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const { WebPackManifestPlugin, WebpackManifestPlugin } = require("webpack-manifest-plugin");
 const path = require("path");
 const common = require("./webpack.common");
 
@@ -19,7 +20,8 @@ module.exports = merge(common, {
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       template: './src/public/index.html'
-    })
+    }),
+    new WebpackManifestPlugin()
   ],
   module: {
     rules: [

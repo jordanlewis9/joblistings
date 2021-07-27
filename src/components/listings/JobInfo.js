@@ -3,7 +3,7 @@ import React from 'react';
 const JobInfo = ({ listing }) => {
     return (
         <div className="job__info--container">
-            <img src={listing.logo} className="job__info--picture"/>
+            <img src={listing.logo} className="job__info--picture" alt="Company Logo"/>
             <div className="job__info--listing-container">
                 <p className="job__info--company">{listing.company}</p>
                 <div className="job__info--extra-container">
