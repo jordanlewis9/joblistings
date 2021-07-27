@@ -4,6 +4,9 @@ const path = require('path')
 
 module.exports = {
     entry: './src/index.js',
+    output: {
+        assetModuleFilename: "images/[name][ext]"
+    },
     module: {
         rules: [
             {
