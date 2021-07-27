@@ -8,10 +8,12 @@ module.exports = merge(common, {
   output: {
     filename: "[name].bundle.js",
     path: path.resolve(__dirname, "dist"),
-    publicPath: "/assets/"
+    publicPath: "/",
+    assetModuleFilename: "images/[name][ext]"
   },
   devServer: {
     port: 3000,
+    open: true,
     contentBase: path.resolve(__dirname, 'dist'),
     hot: true
   },

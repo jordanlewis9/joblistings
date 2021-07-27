@@ -8,7 +8,7 @@ module.exports = {
         rules: [
             {
                 test: /\.svg/,
-                type: 'asset/inline'
+                type: 'asset/resource'
             },
             {
                 test: /\.js$/,
